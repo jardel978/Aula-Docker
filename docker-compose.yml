@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  proxy:
+    image: nomedaimagem
+    container_name: webserver
+    build:
+      context: .
+    ports:
+      - "8000:80"
+    networks:
+      - webserver
+
+networks: 
+  webserver:
+    driver: bridge
+
+
+    # docker-compose up -d
